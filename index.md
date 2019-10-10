@@ -80,11 +80,11 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif site.carpentry == "dc" %}
+{% if page.carpentry == "swc" %}
+{% include sc/intro.html %}
+{% elsif page.carpentry == "dc" %}
 {% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
+{% elsif page.carpentry == "lc" %}
 {% include lc/intro.html %}
 {% endif %}
 
@@ -231,11 +231,11 @@ to match your plans.  You may also want to change 'Day 1' and 'Day
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swcc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
+{% if page.carpentry == "swc" %}
+{% include sc/schedule.html %}
+{% elsif page.carpentry == "dc" %}
 {% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
+{% elsif page.carpentry == "lc" %}
 {% include lc/schedule.html %}
 {% endif %}
 
@@ -275,12 +275,13 @@ please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
-{% if site.carpentry == "dc" %}
+
+{% if page.carpentry == "swc" %}
+{% include sc/syllabus.html %}
+{% elsif page.carpentry == "dc" %}
 {% include dc/syllabus.html %}
-{% elsif site.carpentry == "lc" %}
+{% elsif page.carpentry == "lc" %}
 {% include lc/syllabus.html %}
-{% elsif site.carpentry == "swc" %}
-{% include swc/syllabus.html %}
 {% endif %}
 
 <hr/>
