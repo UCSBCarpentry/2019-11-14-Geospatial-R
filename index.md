@@ -231,8 +231,12 @@ to match your plans.  You may also want to change 'Day 1' and 'Day
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "dc" %}
+{% if site.carpentry == "swc" %}
+{% include swcc/schedule.html %}
+{% elsif site.carpentry == "dc" %}
 {% include dc/schedule.html %}
+{% elsif site.carpentry == "lc" %}
+{% include lc/schedule.html %}
 {% endif %}
 
 {% comment %}
@@ -271,9 +275,12 @@ please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
-
-{% if site.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
 {% include dc/syllabus.html %}
+{% elsif site.carpentry == "lc" %}
+{% include lc/syllabus.html %}
+{% if site.carpentry == "swc" %}
+{% include swc/syllabus.html %}
 {% endif %}
 
 <hr/>
