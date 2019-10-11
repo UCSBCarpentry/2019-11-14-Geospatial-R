@@ -291,8 +291,12 @@ please preview your site before committing, and make sure to run
 
 <p>
   To participate in a
-  {% if site.carpentry == "dc" %}
+  {% if site.carpentry == "swc" %}
+  Software Carpentry
+  {% elsif site.carpentry == "dc" %}
   Data Carpentry
+  {% elsif site.carpentry == "lc" %}
+  Library Carpentry
   {% endif %}
   workshop,
   you will need access to the software described below.
