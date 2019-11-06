@@ -21,7 +21,7 @@ source: Rmd
 ```{r, include=FALSE}
 source("../bin/chunk-options.R")
 source("../setup.R")
-knitr_fig_path("01-")
+knitr_fig_path("")
 ```
 
 ```{r load-libraries-1, results='hide', echo=FALSE, message=FALSE}
